@@ -17,7 +17,7 @@ import {
   Outlet,
 } from "react-router-dom";
 
-const layout = () => {
+const main = () => {
   return (
     <div>
       <Navbar />
@@ -30,11 +30,11 @@ const layout = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    Element: <layout />,
+    element: <main />,
     children: [
       {
         path: "/",
-        Element: <Home />,
+        element: <Home />,
       },
       {
         path: "/post/:id",
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <div className='container'>
         <RouterProvider router={router} />
       </div>
