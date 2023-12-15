@@ -17,7 +17,7 @@ import {
   Outlet,
 } from "react-router-dom";
 
-const main = () => {
+const Main = () => {
   return (
     <div>
       <Navbar />
@@ -30,7 +30,7 @@ const main = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <main />,
+    element: <Main />,
     children: [
       {
         path: "/",
